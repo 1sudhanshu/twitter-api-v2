@@ -5,11 +5,12 @@ repository: https://github.com/twitter-dart/twitter-api-v2
 issue_tracker: https://github.com/twitter-dart/twitter-api-v2/issues
 
 environment:
-  sdk: ">=2.17.0 <3.0.0"
+  sdk: ">=3.1.3 <4.0.0"
 
 dependencies:
-  twitter_api_core: ^1.3.4
-  http: ^0.13.5
+  twitter_api_core:
+    git: https://github.com/1sudhanshu/twitter-api-core
+  http: ^1.2.1
   json_annotation: ^4.7.0
   freezed_annotation: ^2.1.0
 
