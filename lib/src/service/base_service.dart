@@ -245,7 +245,7 @@ abstract class BaseService implements _Service {
       final errors = jsonBody[ResponseField.errors.value];
       for (final error in errors) {
         if (error['code'] == 88) {
-          throw core.RateLimitExceededException(error['message'] ?? '');
+          throw core.RateLimitExceededException(error['message'] ?? '', errors);
         }
       }
     }
@@ -288,7 +288,7 @@ abstract class BaseService implements _Service {
       final errors = jsonBody[ResponseField.errors.value];
       for (final error in errors) {
         if (error['code'] == 88) {
-          throw core.RateLimitExceededException(error['message'] ?? '');
+          throw core.RateLimitExceededException(error['message'] ?? '', errors);
         }
       }
     }
